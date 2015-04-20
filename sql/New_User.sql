@@ -1,0 +1,5 @@
+CREATE USER 'Athena'@'%' IDENTIFIED BY 'masterofpuppets';
+GRANT USAGE ON *.* TO 'Athena'@'%';
+GRANT SELECT, SHOW VIEW, CREATE, DELETE, INSERT, UPDATE  ON TABLE `VPLibrary`.`Books` TO 'Athena'@'%';
+FLUSH PRIVILEGES;
+SHOW GRANTS FOR 'Athena'@'%';
