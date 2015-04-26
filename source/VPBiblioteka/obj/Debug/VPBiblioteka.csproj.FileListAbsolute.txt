@@ -1,1 +1,12 @@
 c:\users\tina\documents\visual studio 2013\Projects\VPBiblioteka\VPBiblioteka\bin\Debug\VPBiblioteka.exe.config
+D:\GitHub\VPBiblioteka\source\VPBiblioteka\bin\Debug\VPBiblioteka.exe.config
+D:\GitHub\VPBiblioteka\source\VPBiblioteka\obj\Debug\VPBiblioteka.csprojResolveAssemblyReference.cache
+D:\GitHub\VPBiblioteka\source\VPBiblioteka\obj\Debug\VPBiblioteka.Form1.resources
+D:\GitHub\VPBiblioteka\source\VPBiblioteka\obj\Debug\VPBiblioteka.Form2.resources
+D:\GitHub\VPBiblioteka\source\VPBiblioteka\obj\Debug\VPBiblioteka.Properties.Resources.resources
+D:\GitHub\VPBiblioteka\source\VPBiblioteka\obj\Debug\VPBiblioteka.csproj.GenerateResource.Cache
+D:\GitHub\VPBiblioteka\source\VPBiblioteka\bin\Debug\VPBiblioteka.exe
+D:\GitHub\VPBiblioteka\source\VPBiblioteka\bin\Debug\VPBiblioteka.pdb
+D:\GitHub\VPBiblioteka\source\VPBiblioteka\bin\Debug\MySql.Data.dll
+D:\GitHub\VPBiblioteka\source\VPBiblioteka\obj\Debug\VPBiblioteka.exe
+D:\GitHub\VPBiblioteka\source\VPBiblioteka\obj\Debug\VPBiblioteka.pdb
