@@ -43,13 +43,16 @@
             this.btnDodadi = new System.Windows.Forms.Button();
             this.btnIzbrisi = new System.Windows.Forms.Button();
             this.label5 = new System.Windows.Forms.Label();
-            this.cbHorror = new System.Windows.Forms.CheckBox();
-            this.cbMystery = new System.Windows.Forms.CheckBox();
-            this.cbThriller = new System.Windows.Forms.CheckBox();
-            this.cbFantasy = new System.Windows.Forms.CheckBox();
-            this.cbDrama = new System.Windows.Forms.CheckBox();
-            this.cbRomance = new System.Windows.Forms.CheckBox();
+            this.gbGenres = new System.Windows.Forms.GroupBox();
+            this.btnAllGenres = new System.Windows.Forms.Button();
+            this.radioButton4 = new System.Windows.Forms.RadioButton();
+            this.radioButton2 = new System.Windows.Forms.RadioButton();
+            this.radioButton5 = new System.Windows.Forms.RadioButton();
+            this.radioButton1 = new System.Windows.Forms.RadioButton();
+            this.radioButton6 = new System.Windows.Forms.RadioButton();
+            this.radioButton3 = new System.Windows.Forms.RadioButton();
             this.panel1.SuspendLayout();
+            this.gbGenres.SuspendLayout();
             this.SuspendLayout();
             // 
             // lbKnigi
@@ -57,9 +60,9 @@
             this.lbKnigi.ForeColor = System.Drawing.SystemColors.InactiveCaptionText;
             this.lbKnigi.FormattingEnabled = true;
             this.lbKnigi.Location = new System.Drawing.Point(18, 39);
-            this.lbKnigi.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.lbKnigi.Margin = new System.Windows.Forms.Padding(2);
             this.lbKnigi.Name = "lbKnigi";
-            this.lbKnigi.Size = new System.Drawing.Size(262, 290);
+            this.lbKnigi.Size = new System.Drawing.Size(262, 264);
             this.lbKnigi.TabIndex = 0;
             // 
             // panel1
@@ -75,15 +78,15 @@
             this.panel1.Controls.Add(this.rtbSummary);
             this.panel1.Controls.Add(this.tbName);
             this.panel1.Location = new System.Drawing.Point(296, 23);
-            this.panel1.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.panel1.Margin = new System.Windows.Forms.Padding(2);
             this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(284, 405);
+            this.panel1.Size = new System.Drawing.Size(284, 417);
             this.panel1.TabIndex = 1;
             // 
             // label6
             // 
             this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(22, 42);
+            this.label6.Location = new System.Drawing.Point(11, 52);
             this.label6.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label6.Name = "label6";
             this.label6.Size = new System.Drawing.Size(111, 13);
@@ -92,8 +95,8 @@
             // 
             // tbSurname
             // 
-            this.tbSurname.Location = new System.Drawing.Point(25, 57);
-            this.tbSurname.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tbSurname.Location = new System.Drawing.Point(14, 67);
+            this.tbSurname.Margin = new System.Windows.Forms.Padding(2);
             this.tbSurname.Name = "tbSurname";
             this.tbSurname.ReadOnly = true;
             this.tbSurname.Size = new System.Drawing.Size(142, 20);
@@ -102,7 +105,7 @@
             // label4
             // 
             this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(22, 144);
+            this.label4.Location = new System.Drawing.Point(14, 163);
             this.label4.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label4.Name = "label4";
             this.label4.Size = new System.Drawing.Size(96, 13);
@@ -112,7 +115,7 @@
             // label3
             // 
             this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(22, 107);
+            this.label3.Location = new System.Drawing.Point(11, 126);
             this.label3.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label3.Name = "label3";
             this.label3.Size = new System.Drawing.Size(88, 13);
@@ -122,7 +125,7 @@
             // label2
             // 
             this.label2.AutoSize = true;
-            this.label2.Location = new System.Drawing.Point(22, 74);
+            this.label2.Location = new System.Drawing.Point(11, 89);
             this.label2.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label2.Name = "label2";
             this.label2.Size = new System.Drawing.Size(113, 13);
@@ -132,7 +135,7 @@
             // label1
             // 
             this.label1.AutoSize = true;
-            this.label1.Location = new System.Drawing.Point(22, 10);
+            this.label1.Location = new System.Drawing.Point(11, 15);
             this.label1.Margin = new System.Windows.Forms.Padding(2, 0, 2, 0);
             this.label1.Name = "label1";
             this.label1.Size = new System.Drawing.Size(87, 13);
@@ -141,8 +144,8 @@
             // 
             // tbPubHouse
             // 
-            this.tbPubHouse.Location = new System.Drawing.Point(25, 121);
-            this.tbPubHouse.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tbPubHouse.Location = new System.Drawing.Point(14, 141);
+            this.tbPubHouse.Margin = new System.Windows.Forms.Padding(2);
             this.tbPubHouse.Name = "tbPubHouse";
             this.tbPubHouse.ReadOnly = true;
             this.tbPubHouse.Size = new System.Drawing.Size(142, 20);
@@ -150,8 +153,8 @@
             // 
             // tbPubYear
             // 
-            this.tbPubYear.Location = new System.Drawing.Point(25, 89);
-            this.tbPubYear.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tbPubYear.Location = new System.Drawing.Point(14, 104);
+            this.tbPubYear.Margin = new System.Windows.Forms.Padding(2);
             this.tbPubYear.Name = "tbPubYear";
             this.tbPubYear.ReadOnly = true;
             this.tbPubYear.Size = new System.Drawing.Size(142, 20);
@@ -159,8 +162,8 @@
             // 
             // rtbSummary
             // 
-            this.rtbSummary.Location = new System.Drawing.Point(25, 167);
-            this.rtbSummary.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.rtbSummary.Location = new System.Drawing.Point(14, 178);
+            this.rtbSummary.Margin = new System.Windows.Forms.Padding(2);
             this.rtbSummary.Name = "rtbSummary";
             this.rtbSummary.ReadOnly = true;
             this.rtbSummary.Size = new System.Drawing.Size(251, 219);
@@ -169,8 +172,8 @@
             // 
             // tbName
             // 
-            this.tbName.Location = new System.Drawing.Point(25, 24);
-            this.tbName.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.tbName.Location = new System.Drawing.Point(14, 30);
+            this.tbName.Margin = new System.Windows.Forms.Padding(2);
             this.tbName.Name = "tbName";
             this.tbName.ReadOnly = true;
             this.tbName.Size = new System.Drawing.Size(142, 20);
@@ -178,19 +181,20 @@
             // 
             // btnDodadi
             // 
-            this.btnDodadi.Location = new System.Drawing.Point(18, 394);
-            this.btnDodadi.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnDodadi.Location = new System.Drawing.Point(9, 414);
+            this.btnDodadi.Margin = new System.Windows.Forms.Padding(2);
             this.btnDodadi.Name = "btnDodadi";
             this.btnDodadi.Size = new System.Drawing.Size(89, 26);
             this.btnDodadi.TabIndex = 2;
             this.btnDodadi.Text = "Додади";
             this.btnDodadi.UseVisualStyleBackColor = true;
+            this.btnDodadi.Click += new System.EventHandler(this.btnDodadi_Click);
             // 
             // btnIzbrisi
             // 
             this.btnIzbrisi.Enabled = false;
-            this.btnIzbrisi.Location = new System.Drawing.Point(190, 394);
-            this.btnIzbrisi.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.btnIzbrisi.Location = new System.Drawing.Point(202, 414);
+            this.btnIzbrisi.Margin = new System.Windows.Forms.Padding(2);
             this.btnIzbrisi.Name = "btnIzbrisi";
             this.btnIzbrisi.Size = new System.Drawing.Size(89, 26);
             this.btnIzbrisi.TabIndex = 3;
@@ -207,94 +211,117 @@
             this.label5.TabIndex = 4;
             this.label5.Text = "Книги";
             // 
-            // cbHorror
+            // gbGenres
             // 
-            this.cbHorror.AutoSize = true;
-            this.cbHorror.Location = new System.Drawing.Point(18, 337);
-            this.cbHorror.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.cbHorror.Name = "cbHorror";
-            this.cbHorror.Size = new System.Drawing.Size(57, 17);
-            this.cbHorror.TabIndex = 5;
-            this.cbHorror.Text = "Хорор";
-            this.cbHorror.UseVisualStyleBackColor = true;
+            this.gbGenres.Controls.Add(this.btnAllGenres);
+            this.gbGenres.Controls.Add(this.radioButton4);
+            this.gbGenres.Controls.Add(this.radioButton2);
+            this.gbGenres.Controls.Add(this.radioButton5);
+            this.gbGenres.Controls.Add(this.radioButton1);
+            this.gbGenres.Controls.Add(this.radioButton6);
+            this.gbGenres.Controls.Add(this.radioButton3);
+            this.gbGenres.Location = new System.Drawing.Point(12, 308);
+            this.gbGenres.Name = "gbGenres";
+            this.gbGenres.Size = new System.Drawing.Size(279, 101);
+            this.gbGenres.TabIndex = 9;
+            this.gbGenres.TabStop = false;
+            this.gbGenres.Text = "Жанрови";
             // 
-            // cbMystery
+            // btnAllGenres
             // 
-            this.cbMystery.AutoSize = true;
-            this.cbMystery.Location = new System.Drawing.Point(111, 337);
-            this.cbMystery.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.cbMystery.Name = "cbMystery";
-            this.cbMystery.Size = new System.Drawing.Size(78, 17);
-            this.cbMystery.TabIndex = 6;
-            this.cbMystery.Text = "Мистерија";
-            this.cbMystery.UseVisualStyleBackColor = true;
+            this.btnAllGenres.Location = new System.Drawing.Point(89, 65);
+            this.btnAllGenres.Name = "btnAllGenres";
+            this.btnAllGenres.Size = new System.Drawing.Size(101, 23);
+            this.btnAllGenres.TabIndex = 10;
+            this.btnAllGenres.Text = "Сите жанрови";
+            this.btnAllGenres.UseVisualStyleBackColor = true;
+            this.btnAllGenres.Click += new System.EventHandler(this.btnAllGenres_Click);
             // 
-            // cbThriller
+            // radioButton4
             // 
-            this.cbThriller.AutoSize = true;
-            this.cbThriller.Location = new System.Drawing.Point(204, 337);
-            this.cbThriller.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.cbThriller.Name = "cbThriller";
-            this.cbThriller.Size = new System.Drawing.Size(63, 17);
-            this.cbThriller.TabIndex = 7;
-            this.cbThriller.Text = "Трилер";
-            this.cbThriller.UseVisualStyleBackColor = true;
+            this.radioButton4.AutoSize = true;
+            this.radioButton4.Location = new System.Drawing.Point(196, 42);
+            this.radioButton4.Name = "radioButton4";
+            this.radioButton4.Size = new System.Drawing.Size(70, 17);
+            this.radioButton4.TabIndex = 14;
+            this.radioButton4.TabStop = true;
+            this.radioButton4.Text = "Романса";
+            this.radioButton4.UseVisualStyleBackColor = true;
             // 
-            // cbFantasy
+            // radioButton2
             // 
-            this.cbFantasy.AutoSize = true;
-            this.cbFantasy.Location = new System.Drawing.Point(18, 366);
-            this.cbFantasy.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.cbFantasy.Name = "cbFantasy";
-            this.cbFantasy.Size = new System.Drawing.Size(80, 17);
-            this.cbFantasy.TabIndex = 8;
-            this.cbFantasy.Text = "Фантазија";
-            this.cbFantasy.UseVisualStyleBackColor = true;
+            this.radioButton2.AutoSize = true;
+            this.radioButton2.Location = new System.Drawing.Point(104, 19);
+            this.radioButton2.Name = "radioButton2";
+            this.radioButton2.Size = new System.Drawing.Size(77, 17);
+            this.radioButton2.TabIndex = 10;
+            this.radioButton2.TabStop = true;
+            this.radioButton2.Text = "Мистерија";
+            this.radioButton2.UseVisualStyleBackColor = true;
             // 
-            // cbDrama
+            // radioButton5
             // 
-            this.cbDrama.AutoSize = true;
-            this.cbDrama.Location = new System.Drawing.Point(111, 366);
-            this.cbDrama.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.cbDrama.Name = "cbDrama";
-            this.cbDrama.Size = new System.Drawing.Size(61, 17);
-            this.cbDrama.TabIndex = 9;
-            this.cbDrama.Text = "Драма";
-            this.cbDrama.UseVisualStyleBackColor = true;
+            this.radioButton5.AutoSize = true;
+            this.radioButton5.Location = new System.Drawing.Point(104, 42);
+            this.radioButton5.Name = "radioButton5";
+            this.radioButton5.Size = new System.Drawing.Size(60, 17);
+            this.radioButton5.TabIndex = 13;
+            this.radioButton5.TabStop = true;
+            this.radioButton5.Text = "Драма";
+            this.radioButton5.UseVisualStyleBackColor = true;
             // 
-            // cbRomance
+            // radioButton1
             // 
-            this.cbRomance.AutoSize = true;
-            this.cbRomance.Location = new System.Drawing.Point(204, 366);
-            this.cbRomance.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
-            this.cbRomance.Name = "cbRomance";
-            this.cbRomance.Size = new System.Drawing.Size(71, 17);
-            this.cbRomance.TabIndex = 10;
-            this.cbRomance.Text = "Романса";
-            this.cbRomance.UseVisualStyleBackColor = true;
+            this.radioButton1.AutoSize = true;
+            this.radioButton1.Location = new System.Drawing.Point(7, 19);
+            this.radioButton1.Name = "radioButton1";
+            this.radioButton1.Size = new System.Drawing.Size(56, 17);
+            this.radioButton1.TabIndex = 9;
+            this.radioButton1.TabStop = true;
+            this.radioButton1.Text = "Хорор";
+            this.radioButton1.UseVisualStyleBackColor = true;
+            // 
+            // radioButton6
+            // 
+            this.radioButton6.AutoSize = true;
+            this.radioButton6.Location = new System.Drawing.Point(7, 42);
+            this.radioButton6.Name = "radioButton6";
+            this.radioButton6.Size = new System.Drawing.Size(79, 17);
+            this.radioButton6.TabIndex = 12;
+            this.radioButton6.TabStop = true;
+            this.radioButton6.Text = "Фантазија";
+            this.radioButton6.UseVisualStyleBackColor = true;
+            // 
+            // radioButton3
+            // 
+            this.radioButton3.AutoSize = true;
+            this.radioButton3.Location = new System.Drawing.Point(196, 19);
+            this.radioButton3.Name = "radioButton3";
+            this.radioButton3.Size = new System.Drawing.Size(62, 17);
+            this.radioButton3.TabIndex = 11;
+            this.radioButton3.TabStop = true;
+            this.radioButton3.Text = "Трилер";
+            this.radioButton3.UseVisualStyleBackColor = true;
             // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(596, 426);
-            this.Controls.Add(this.cbRomance);
-            this.Controls.Add(this.cbDrama);
-            this.Controls.Add(this.cbFantasy);
-            this.Controls.Add(this.cbThriller);
-            this.Controls.Add(this.cbMystery);
-            this.Controls.Add(this.cbHorror);
+            this.ClientSize = new System.Drawing.Size(596, 451);
+            this.Controls.Add(this.gbGenres);
             this.Controls.Add(this.label5);
             this.Controls.Add(this.btnIzbrisi);
             this.Controls.Add(this.btnDodadi);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.lbKnigi);
-            this.Margin = new System.Windows.Forms.Padding(2, 2, 2, 2);
+            this.Margin = new System.Windows.Forms.Padding(2);
             this.Name = "Form1";
             this.Text = "Библиотека";
             this.Load += new System.EventHandler(this.Form1_Load);
             this.panel1.ResumeLayout(false);
             this.panel1.PerformLayout();
+            this.gbGenres.ResumeLayout(false);
+            this.gbGenres.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -317,12 +344,14 @@
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.TextBox tbSurname;
-        private System.Windows.Forms.CheckBox cbHorror;
-        private System.Windows.Forms.CheckBox cbMystery;
-        private System.Windows.Forms.CheckBox cbThriller;
-        private System.Windows.Forms.CheckBox cbFantasy;
-        private System.Windows.Forms.CheckBox cbDrama;
-        private System.Windows.Forms.CheckBox cbRomance;
+        private System.Windows.Forms.GroupBox gbGenres;
+        private System.Windows.Forms.RadioButton radioButton4;
+        private System.Windows.Forms.RadioButton radioButton2;
+        private System.Windows.Forms.RadioButton radioButton5;
+        private System.Windows.Forms.RadioButton radioButton1;
+        private System.Windows.Forms.RadioButton radioButton6;
+        private System.Windows.Forms.RadioButton radioButton3;
+        private System.Windows.Forms.Button btnAllGenres;
     }
 }
 
