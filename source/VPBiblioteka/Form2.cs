@@ -16,5 +16,21 @@ namespace VPBiblioteka
         {
             InitializeComponent();
         }
+
+        private void Form2_Load(object sender, EventArgs e)
+        {
+            String genre = "Horror,Mystery,Thriller,Fantasy,Drama,Romance";
+            String[] genres = genre.Split(',');
+
+            foreach (String gen in genres)
+            {
+                cbGenre.Items.Add(gen);
+            }
+        }
+
+        private void btnExit_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }
