@@ -45,6 +45,42 @@ namespace VPBiblioteka
                 con.Close();
             }
         }
+
+        private void selectSpecific_books(String book)
+        {
+            tbName.Text = null;
+            tbSurname.Text = null;
+            tbPubHouse.Text = null;
+            tbPubYear.Text = null;
+            rtbSummary.Text = null;
+            string Select = "SELECT * FROM Books WHERE `Book_name` =" +'"' + book + '"' +";";
+            //Debugging the command
+            //MessageBox.Show(Select, "Unable to connect to database!");
+            MySqlDataReader Reader;
+            MySqlConnection con = new MySqlConnection(Connection);
+            try
+            {
+                con.Open();
+                MySqlCommand cmd = new MySqlCommand(Select, con);
+                Reader = cmd.ExecuteReader();
+                while (Reader.Read())
+                {
+                    tbName.Text = (Reader.GetString("Auth_name"));
+                    tbSurname.Text = (Reader.GetString("Auth_surname"));
+                    tbPubHouse.Text = (Reader.GetString("Publish_house"));
+                    tbPubYear.Text = (Reader.GetString("Publish_year"));
+                    rtbSummary.Text = (Reader.GetString("Book_description"));
+                }
+            }
+            catch (MySqlException ex)
+            {
+                MessageBox.Show(ex.Message, "Unable to connect to database!");
+            }
+            finally
+            {
+                con.Close();
+            }
+        }
         private void Form1_Load(object sender, EventArgs e)
         {
             for (int i = 0; i < gbGenres.Controls.Count; i++)
@@ -233,6 +269,15 @@ namespace VPBiblioteka
                 }
             }
             selectAll_books();
+        }
+
+        private void lbKnigi_SelectedIndexChanged(object sender, EventArgs e)
+        {
+            if(lbKnigi.SelectedItem != null)
+            {
+                String Kniga = lbKnigi.SelectedItem.ToString();
+                selectSpecific_books(Kniga);
+            }
         }
     }
 }

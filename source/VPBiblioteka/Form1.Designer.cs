@@ -64,6 +64,7 @@
             this.lbKnigi.Name = "lbKnigi";
             this.lbKnigi.Size = new System.Drawing.Size(262, 264);
             this.lbKnigi.TabIndex = 0;
+            this.lbKnigi.SelectedIndexChanged += new System.EventHandler(this.lbKnigi_SelectedIndexChanged);
             // 
             // panel1
             // 
