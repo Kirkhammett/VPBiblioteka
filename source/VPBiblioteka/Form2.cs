@@ -17,14 +17,16 @@ namespace VPBiblioteka
         + "UID=Athena;" + "PASSWORD=masterofpuppets;";
         private void insertBook(string Ime, string Prezime, string ImeKniga, int Godina, string izdavackaKukja, string Zanr, string Sodrzina)
         {
-            string Select = "INSERT INTO `VPLibrary`.`Books` (`Book_name`, `Auth_name`, `Auth_surname`, `Publish_year`, `Publish_house`, `Book_description`) VALUES"
-                            + "('" + Ime + "'," + "'" + Prezime + "'," + "'" + ImeKniga + "'," + Godina + "," + "'" + izdavackaKukja + "'," + "'" + Zanr + "'," + "'" + Sodrzina + "'" + ");";
-
+            string Insert = "INSERT INTO `VPLibrary`.`Books` (`Book_name`, `Auth_name`, `Auth_surname`, `Publish_year`, `Publish_house`, `Genre`, `Book_description`) VALUES"
+                            + "('" + ImeKniga + "'," + "'" + Ime + "'," + "'" + Prezime + "'," + Godina + "," + "'" + izdavackaKukja + "'," + "'" + Zanr + "'," + "'" + Sodrzina + "'" + ");";
+            MessageBox.Show(Insert);
             MySqlConnection con = new MySqlConnection(Connection);
             try
             {
                 con.Open();
-                MySqlCommand cmd = new MySqlCommand(Select, con);
+               MySqlCommand cmd = new MySqlCommand(Insert,con);
+               cmd.ExecuteNonQuery();
+               MessageBox.Show("Книгата е успешно додадена!", "Успех!");
             }
             catch (MySqlException ex)
             {
@@ -173,7 +175,6 @@ namespace VPBiblioteka
             int.TryParse(tbGodIzdavanje.Text, out god);
             string genre = cbGenre.SelectedItem.ToString();
             insertBook(tbIme.Text, tbPrezime.Text, tbImeKniga.Text, god, tbIzdavackaKukja.Text, genre, rtbSodrzina.Text);
-            MessageBox.Show("Книгата е успешно додадена!", "Успех!");
         }
 
         private void tbIme_KeyPress(object sender, KeyPressEventArgs e)
