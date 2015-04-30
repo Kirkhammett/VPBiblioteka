@@ -19,14 +19,15 @@ namespace VPBiblioteka
         {
             string Insert = "INSERT INTO `VPLibrary`.`Books` (`Book_name`, `Auth_name`, `Auth_surname`, `Publish_year`, `Publish_house`, `Genre`, `Book_description`) VALUES"
                             + "('" + ImeKniga + "'," + "'" + Ime + "'," + "'" + Prezime + "'," + Godina + "," + "'" + izdavackaKukja + "'," + "'" + Zanr + "'," + "'" + Sodrzina + "'" + ");";
-            MessageBox.Show(Insert);
+            //Debugging the command
+            //MessageBox.Show(Insert);
             MySqlConnection con = new MySqlConnection(Connection);
             try
             {
                 con.Open();
-               MySqlCommand cmd = new MySqlCommand(Insert,con);
-               cmd.ExecuteNonQuery();
-               MessageBox.Show("Книгата е успешно додадена!", "Успех!");
+                MySqlCommand cmd = new MySqlCommand(Insert, con);
+                cmd.ExecuteNonQuery();
+                MessageBox.Show("Книгата е успешно додадена!", "Успех!");
             }
             catch (MySqlException ex)
             {
@@ -34,7 +35,12 @@ namespace VPBiblioteka
             }
             finally
             {
+                if (System.Windows.Forms.Application.OpenForms["Form1"] != null)
+                {
+                    (System.Windows.Forms.Application.OpenForms["Form1"] as Form1).selectAll_books();
+                }
                 con.Close();
+                this.Close();
             }
         }
         public Form2()
@@ -170,7 +176,6 @@ namespace VPBiblioteka
                 MessageBox.Show("Сите полиња се задолжителни и мора да бидат пополнети за да се додаде книга!", "Недосататок на податоци!");
                 return;
             }
-            //TODO: Change this dumb thing and actually add support for a real insert.
             int god = 0;
             int.TryParse(tbGodIzdavanje.Text, out god);
             string genre = cbGenre.SelectedItem.ToString();
