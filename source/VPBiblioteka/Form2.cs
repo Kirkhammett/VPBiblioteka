@@ -7,11 +7,34 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using MySql.Data.MySqlClient;
 
 namespace VPBiblioteka
 {
     public partial class Form2 : Form
     {
+        string Connection = "SERVER=oriondev.me;" + "DATABASE=VPLibrary;"
+        + "UID=Athena;" + "PASSWORD=masterofpuppets;";
+        private void insertBook(string Ime, string Prezime, string ImeKniga, int Godina, string izdavackaKukja, string Zanr, string Sodrzina)
+        {
+            string Select = "INSERT INTO `VPLibrary`.`Books` (`Book_name`, `Auth_name`, `Auth_surname`, `Publish_year`, `Publish_house`, `Book_description`) VALUES"
+                            + "('" + Ime + "'," + "'" + Prezime + "'," + "'" + ImeKniga + "'," + Godina + "," + "'" + izdavackaKukja + "'," + "'" + Zanr + "'," + "'" + Sodrzina + "'" + ");";
+
+            MySqlConnection con = new MySqlConnection(Connection);
+            try
+            {
+                con.Open();
+                MySqlCommand cmd = new MySqlCommand(Select, con);
+            }
+            catch (MySqlException ex)
+            {
+                MessageBox.Show(ex.Message, "Unable to connect to database!");
+            }
+            finally
+            {
+                con.Close();
+            }
+        }
         public Form2()
         {
             InitializeComponent();
@@ -146,7 +169,65 @@ namespace VPBiblioteka
                 return;
             }
             //TODO: Change this dumb thing and actually add support for a real insert.
+            int god = 0;
+            int.TryParse(tbGodIzdavanje.Text, out god);
+            string genre = cbGenre.SelectedItem.ToString();
+            insertBook(tbIme.Text, tbPrezime.Text, tbImeKniga.Text, god, tbIzdavackaKukja.Text, genre, rtbSodrzina.Text);
             MessageBox.Show("Книгата е успешно додадена!", "Успех!");
+        }
+
+        private void tbIme_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if ((e.KeyChar >= 'a' && e.KeyChar <= 'z') || (e.KeyChar >= 'A' && e.KeyChar <= 'Z') || e.KeyChar == '\b' || e.KeyChar == ' ')
+            {
+                e.Handled = false;
+            }
+            else
+            {
+                e.Handled = true;
+                MessageBox.Show("Треба да внесете само букви!", "Грешка!");
+            }
+        }
+
+        private void tbPrezime_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if ((e.KeyChar >= 'a' && e.KeyChar <= 'z') || (e.KeyChar >= 'A' && e.KeyChar <= 'Z') || e.KeyChar == '\b' || e.KeyChar == ' ')
+            {
+                e.Handled = false;
+            }
+            else
+            {
+                e.Handled = true;
+                MessageBox.Show("Треба да внесете само букви!", "Грешка!");
+            }
+
+        }
+
+        private void tbImeKniga_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if ((e.KeyChar >= 'a' && e.KeyChar <= 'z') || (e.KeyChar >= 'A' && e.KeyChar <= 'Z') || e.KeyChar == '\b' || e.KeyChar == ' ')
+            {
+                e.Handled = false;
+            }
+            else
+            {
+                e.Handled = true;
+                MessageBox.Show("Треба да внесете само букви!", "Грешка!");
+            }
+
+        }
+
+        private void tbIzdavackaKukja_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if ((e.KeyChar >= 'a' && e.KeyChar <= 'z') || (e.KeyChar >= 'A' && e.KeyChar <= 'Z') || e.KeyChar == '\b' || e.KeyChar == ' ')
+            {
+                e.Handled = false;
+            }
+            else
+            {
+                e.Handled = true;
+                MessageBox.Show("Треба да внесете само букви!", "Грешка!");
+            }
         }
     }
 }

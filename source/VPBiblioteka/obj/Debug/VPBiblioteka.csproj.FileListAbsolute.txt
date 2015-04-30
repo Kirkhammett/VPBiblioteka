@@ -10,3 +10,14 @@ D:\GitHub\VPBiblioteka\source\VPBiblioteka\bin\Debug\VPBiblioteka.pdb
 D:\GitHub\VPBiblioteka\source\VPBiblioteka\bin\Debug\MySql.Data.dll
 D:\GitHub\VPBiblioteka\source\VPBiblioteka\obj\Debug\VPBiblioteka.exe
 D:\GitHub\VPBiblioteka\source\VPBiblioteka\obj\Debug\VPBiblioteka.pdb
+C:\Users\Tina\Documents\GitHub\VPBiblioteka\source\VPBiblioteka\bin\Debug\VPBiblioteka.exe.config
+C:\Users\Tina\Documents\GitHub\VPBiblioteka\source\VPBiblioteka\obj\Debug\VPBiblioteka.exe
+C:\Users\Tina\Documents\GitHub\VPBiblioteka\source\VPBiblioteka\obj\Debug\VPBiblioteka.pdb
+C:\Users\Tina\Documents\GitHub\VPBiblioteka\source\VPBiblioteka\bin\Debug\VPBiblioteka.exe
+C:\Users\Tina\Documents\GitHub\VPBiblioteka\source\VPBiblioteka\bin\Debug\VPBiblioteka.pdb
+C:\Users\Tina\Documents\GitHub\VPBiblioteka\source\VPBiblioteka\bin\Debug\MySql.Data.dll
+C:\Users\Tina\Documents\GitHub\VPBiblioteka\source\VPBiblioteka\obj\Debug\VPBiblioteka.csprojResolveAssemblyReference.cache
+C:\Users\Tina\Documents\GitHub\VPBiblioteka\source\VPBiblioteka\obj\Debug\VPBiblioteka.Form1.resources
+C:\Users\Tina\Documents\GitHub\VPBiblioteka\source\VPBiblioteka\obj\Debug\VPBiblioteka.Form2.resources
+C:\Users\Tina\Documents\GitHub\VPBiblioteka\source\VPBiblioteka\obj\Debug\VPBiblioteka.Properties.Resources.resources
+C:\Users\Tina\Documents\GitHub\VPBiblioteka\source\VPBiblioteka\obj\Debug\VPBiblioteka.csproj.GenerateResource.Cache
