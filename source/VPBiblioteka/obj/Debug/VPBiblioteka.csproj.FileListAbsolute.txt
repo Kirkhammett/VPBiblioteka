@@ -21,3 +21,4 @@ C:\Users\Tina\Documents\GitHub\VPBiblioteka\source\VPBiblioteka\obj\Debug\VPBibl
 C:\Users\Tina\Documents\GitHub\VPBiblioteka\source\VPBiblioteka\obj\Debug\VPBiblioteka.Form2.resources
 C:\Users\Tina\Documents\GitHub\VPBiblioteka\source\VPBiblioteka\obj\Debug\VPBiblioteka.Properties.Resources.resources
 C:\Users\Tina\Documents\GitHub\VPBiblioteka\source\VPBiblioteka\obj\Debug\VPBiblioteka.csproj.GenerateResource.Cache
+D:\GitHub\VPBiblioteka\source\VPBiblioteka\obj\Debug\VPBiblioteka.Form3.resources

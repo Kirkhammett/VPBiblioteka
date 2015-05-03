@@ -21,7 +21,7 @@ namespace VPBiblioteka
         }
 
 
-        private void selectAll_books()
+        public void selectAll_books()
         {
             string Select = "SELECT * FROM Books;";
             MySqlDataReader Reader;
@@ -53,7 +53,7 @@ namespace VPBiblioteka
             tbPubHouse.Text = null;
             tbPubYear.Text = null;
             rtbSummary.Text = null;
-            string Select = "SELECT * FROM Books WHERE `Book_name` =" +'"' + book + '"' +";";
+            string Select = "SELECT * FROM Books WHERE `Book_name` =" + '"' + book + '"' + ";";
             //Debugging the command
             //MessageBox.Show(Select, "Unable to connect to database!");
             MySqlDataReader Reader;
@@ -85,7 +85,7 @@ namespace VPBiblioteka
         {
             for (int i = 0; i < gbGenres.Controls.Count; i++)
             {
-                if(gbGenres.Controls[i] is RadioButton)
+                if (gbGenres.Controls[i] is RadioButton)
                 {
                     RadioButton rb = (RadioButton)gbGenres.Controls[i];
                     rb.CheckedChanged += new System.EventHandler(gbGenres_CheckedChanged);
@@ -95,6 +95,7 @@ namespace VPBiblioteka
 
         private void gbGenres_CheckedChanged(object sender, EventArgs e)
         {
+            btnNaracajKniga.Enabled = false;
             RadioButton rb = sender as RadioButton;
             if (rb.Text == "Хорор" && rb.Checked)
             {
@@ -273,11 +274,22 @@ namespace VPBiblioteka
 
         private void lbKnigi_SelectedIndexChanged(object sender, EventArgs e)
         {
-            if(lbKnigi.SelectedItem != null)
+            if (lbKnigi.SelectedItem != null && lbKnigi.Items.Count > 0)
             {
                 String Kniga = lbKnigi.SelectedItem.ToString();
                 selectSpecific_books(Kniga);
+                btnNaracajKniga.Enabled = true;
             }
+            else
+            {
+                btnNaracajKniga.Enabled = false;
+            }
+        }
+
+        private void btnNaracajKniga_Click(object sender, EventArgs e)
+        {
+            Form3 naracka = new Form3(lbKnigi.SelectedItem.ToString());
+            naracka.ShowDialog();
         }
     }
 }

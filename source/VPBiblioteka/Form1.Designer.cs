@@ -41,7 +41,7 @@
             this.rtbSummary = new System.Windows.Forms.RichTextBox();
             this.tbName = new System.Windows.Forms.TextBox();
             this.btnDodadi = new System.Windows.Forms.Button();
-            this.btnIzbrisi = new System.Windows.Forms.Button();
+            this.btnNaracajKniga = new System.Windows.Forms.Button();
             this.label5 = new System.Windows.Forms.Label();
             this.gbGenres = new System.Windows.Forms.GroupBox();
             this.btnAllGenres = new System.Windows.Forms.Button();
@@ -191,16 +191,17 @@
             this.btnDodadi.UseVisualStyleBackColor = true;
             this.btnDodadi.Click += new System.EventHandler(this.btnDodadi_Click);
             // 
-            // btnIzbrisi
+            // btnNaracajKniga
             // 
-            this.btnIzbrisi.Enabled = false;
-            this.btnIzbrisi.Location = new System.Drawing.Point(202, 414);
-            this.btnIzbrisi.Margin = new System.Windows.Forms.Padding(2);
-            this.btnIzbrisi.Name = "btnIzbrisi";
-            this.btnIzbrisi.Size = new System.Drawing.Size(89, 26);
-            this.btnIzbrisi.TabIndex = 3;
-            this.btnIzbrisi.Text = "Избриши";
-            this.btnIzbrisi.UseVisualStyleBackColor = true;
+            this.btnNaracajKniga.Enabled = false;
+            this.btnNaracajKniga.Location = new System.Drawing.Point(202, 414);
+            this.btnNaracajKniga.Margin = new System.Windows.Forms.Padding(2);
+            this.btnNaracajKniga.Name = "btnNaracajKniga";
+            this.btnNaracajKniga.Size = new System.Drawing.Size(89, 26);
+            this.btnNaracajKniga.TabIndex = 3;
+            this.btnNaracajKniga.Text = "Нарачај книга";
+            this.btnNaracajKniga.UseVisualStyleBackColor = true;
+            this.btnNaracajKniga.Click += new System.EventHandler(this.btnNaracajKniga_Click);
             // 
             // label5
             // 
@@ -311,7 +312,7 @@
             this.ClientSize = new System.Drawing.Size(596, 451);
             this.Controls.Add(this.gbGenres);
             this.Controls.Add(this.label5);
-            this.Controls.Add(this.btnIzbrisi);
+            this.Controls.Add(this.btnNaracajKniga);
             this.Controls.Add(this.btnDodadi);
             this.Controls.Add(this.panel1);
             this.Controls.Add(this.lbKnigi);
@@ -341,7 +342,7 @@
         private System.Windows.Forms.RichTextBox rtbSummary;
         private System.Windows.Forms.TextBox tbName;
         private System.Windows.Forms.Button btnDodadi;
-        private System.Windows.Forms.Button btnIzbrisi;
+        private System.Windows.Forms.Button btnNaracajKniga;
         private System.Windows.Forms.Label label5;
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.TextBox tbSurname;
