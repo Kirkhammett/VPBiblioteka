@@ -128,5 +128,10 @@ namespace VPBiblioteka
             }
             insertCustomer(tbIme.Text, tbPrezime.Text, tbKniga.Text, tbMail.Text);
         }
+
+        private void btnOtkazi_Click(object sender, EventArgs e)
+        {
+            this.Close();
+        }
     }
 }

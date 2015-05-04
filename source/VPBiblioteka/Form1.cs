@@ -20,9 +20,19 @@ namespace VPBiblioteka
             selectAll_books();
         }
 
+        private void clearBooks()
+        {
+            tbName.Text = null;
+            tbSurname.Text = null;
+            tbPubHouse.Text = null;
+            tbPubYear.Text = null;
+            rtbSummary.Text = null;
+        }
 
         public void selectAll_books()
         {
+            clearBooks();
+            btnNaracajKniga.Enabled = false;
             string Select = "SELECT * FROM Books;";
             MySqlDataReader Reader;
             MySqlConnection con = new MySqlConnection(Connection);
@@ -48,11 +58,7 @@ namespace VPBiblioteka
 
         private void selectSpecific_books(String book)
         {
-            tbName.Text = null;
-            tbSurname.Text = null;
-            tbPubHouse.Text = null;
-            tbPubYear.Text = null;
-            rtbSummary.Text = null;
+            clearBooks();
             string Select = "SELECT * FROM Books WHERE `Book_name` =" + '"' + book + '"' + ";";
             //Debugging the command
             //MessageBox.Show(Select, "Unable to connect to database!");
@@ -95,6 +101,7 @@ namespace VPBiblioteka
 
         private void gbGenres_CheckedChanged(object sender, EventArgs e)
         {
+            clearBooks();
             btnNaracajKniga.Enabled = false;
             RadioButton rb = sender as RadioButton;
             if (rb.Text == "Хорор" && rb.Checked)

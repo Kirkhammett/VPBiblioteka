@@ -28,6 +28,7 @@
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Form3));
             this.lblKniga = new System.Windows.Forms.Label();
             this.tbKniga = new System.Windows.Forms.TextBox();
             this.lblIme = new System.Windows.Forms.Label();
@@ -144,6 +145,7 @@
             this.btnOtkazi.TabIndex = 11;
             this.btnOtkazi.Text = "Откажи";
             this.btnOtkazi.UseVisualStyleBackColor = true;
+            this.btnOtkazi.Click += new System.EventHandler(this.btnOtkazi_Click);
             // 
             // Form3
             // 
@@ -162,8 +164,11 @@
             this.Controls.Add(this.lblIme);
             this.Controls.Add(this.tbKniga);
             this.Controls.Add(this.lblKniga);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedSingle;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
+            this.ImeMode = System.Windows.Forms.ImeMode.NoControl;
             this.Name = "Form3";
-            this.Text = "Form3";
+            this.Text = "Нарачка на книга";
             this.ResumeLayout(false);
             this.PerformLayout();
 
